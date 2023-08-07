@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testando via Swagger - Passo a Passo</title>
+</head>
+<body>
+    <h1>Testando via Swagger - Passo a Passo</h1>
+    <p>Para testar a API usando o Swagger UI, siga os seguintes passos:</p>
+    <ol>
+        <li>
+            <h3>Abra o Swagger UI:</h3>
+            <p>Abra o navegador da web de sua preferência e acesse o URL da API. Supondo que a API esteja sendo executada localmente, você pode acessar <a href="http://localhost:8000/docs" target="_blank">http://localhost:8000/docs</a> ou <a href="http://localhost:8000/redoc" target="_blank">http://localhost:8000/redoc</a> (dependendo das configurações do FastAPI) para abrir o Swagger UI.</p>
+        </li>
+        <li>
+            <h3>Endpoints disponíveis:</h3>
+            <p>No Swagger UI, você verá a lista de endpoints disponíveis. Neste exemplo, temos dois endpoints: '/' e '/face_real_or_fake'.</p>
+        </li>
+        <li>
+            <h3>Testando o endpoint '/':</h3>
+            <p>O endpoint raiz '/' é uma rota GET simples que retorna um JSON com a mensagem "Hello World". Para testá-lo, clique no endpoint '/', clique no botão "Try it out" e, em seguida, clique no botão "Execute". O resultado JSON será exibido na área de resposta.</p>
+        </li>
+        <li>
+            <h3>Testando o endpoint '/face_real_or_fake':</h3>
+            <p>O endpoint '/face_real_or_fake' é uma rota POST que espera um arquivo de imagem como entrada. Para testá-lo, clique no endpoint '/face_real_or_fake', clique no botão "Try it out" e, em seguida, faça o upload de uma imagem usando o botão "Escolher arquivo". Depois, clique no botão "Execute". O resultado da previsão será exibido na área de resposta.</p>
+        </li>
+        <li>
+            <h3>Testando o endpoint '/get_image':</h3>
+            <p>O endpoint '/get_image' é uma rota GET que retorna a imagem salva temporariamente pelo endpoint '/face_real_or_fake'. Para testá-lo, clique no endpoint '/get_image', clique no botão "Try it out" e, em seguida, clique no botão "Execute". A imagem será exibida na área de resposta.</p>
+            <p>Pasta expurgo_live e expurgo_spoof contém as imagens retiradas do Dataset antes do treinamento e serão utilizadas para validação</p>
+        </li>
+    </ol>
+    <p>Certifique-se de que você tem o modelo de TensorFlow (weights/trained_model4.h5) e o diretório para salvar temporariamente as imagens (images_temp/) configurados corretamente. Além disso, verifique se a API (FastAPI) está em execução para que você possa interagir com o Swagger UI.</p>
+</body>
+</html>

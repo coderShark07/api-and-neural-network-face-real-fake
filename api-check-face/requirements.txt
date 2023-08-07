@@ -1,0 +1,16 @@
+# pip install -r requirements.txt
+
+# Base ----------------------------------------
+fastapi==0.75.2
+ipython
+psutil
+uvicorn
+tensorflow==2.13.0
+opencv-contrib-python==4.6.0.66
+opencv-python==4.5.5.64
+Pillow==9.1.0
+starlette==0.17.1
+python-multipart==0.0.5
+
+# Extras --------------------------------------
+thop  # FLOPs computation
